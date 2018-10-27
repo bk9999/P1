@@ -1,0 +1,12 @@
+<ul>
+    <li>
+        <p>Photo ID:<input type="text" ng-model="id"></p>
+        <p><button ng-click="gotoPhoto(id)">Go</button></p>
+    </li>
+    <li ng-repeat="x in photos" ng-click="gotoPhoto(x.id)">
+        <p>{{x.id}}</p>
+        <p><img ng-src="{{x.thumbnailUrl}}" alt="{{x.title}}"></p>
+        <p><b>{{x.title}}</b></p>
+        <hr>
+    </li>
+</ul>
